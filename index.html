@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <a-scene fog="type: exponential; color: #000; density: 0.05">
+    <a-scene fog="type: exponential; color: #000; density: 0.06">
 
       <!-- Player -->
       <a-entity
@@ -18,31 +18,62 @@
         position="0 1.7 0">
       </a-entity>
 
-      <!-- Dungeon floor -->
+      <!-- Floor -->
       <a-plane
         rotation="-90 0 0"
-        width="80"
-        height="80"
+        width="60"
+        height="60"
         color="#2a2a2a">
       </a-plane>
-
-      <!-- Dungeon walls -->
-      <a-box position="0 2 -15" width="30" height="5" depth="1" color="#1b1b1b"></a-box>
-      <a-box position="15 2 0" width="1" height="5" depth="30" color="#1b1b1b"></a-box>
-      <a-box position="-15 2 0" width="1" height="5" depth="30" color="#1b1b1b"></a-box>
 
       <!-- Ceiling -->
       <a-plane
         position="0 5 0"
         rotation="90 0 0"
-        width="80"
-        height="80"
-        color="#151515">
+        width="60"
+        height="60"
+        color="#141414">
       </a-plane>
 
-      <!-- Lighting (moody, dangerous) -->
-      <a-light type="ambient" intensity="0.2"></a-light>
-      <a-light type="point" position="0 4 -10" intensity="0.8" distance="20"></a-light>
+      <!-- Back wall -->
+      <a-plane
+        position="0 2.5 -30"
+        rotation="0 0 0"
+        width="60"
+        height="5"
+        color="#1b1b1b">
+      </a-plane>
+
+      <!-- Front wall -->
+      <a-plane
+        position="0 2.5 30"
+        rotation="0 180 0"
+        width="60"
+        height="5"
+        color="#1b1b1b">
+      </a-plane>
+
+      <!-- Left wall -->
+      <a-plane
+        position="-30 2.5 0"
+        rotation="0 90 0"
+        width="60"
+        height="5"
+        color="#1b1b1b">
+      </a-plane>
+
+      <!-- Right wall -->
+      <a-plane
+        position="30 2.5 0"
+        rotation="0 -90 0"
+        width="60"
+        height="5"
+        color="#1b1b1b">
+      </a-plane>
+
+      <!-- Lighting -->
+      <a-light type="ambient" intensity="0.18"></a-light>
+      <a-light type="point" position="0 4 -10" intensity="0.9" distance="20"></a-light>
 
     </a-scene>
   </body>
